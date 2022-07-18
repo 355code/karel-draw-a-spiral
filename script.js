@@ -350,7 +350,23 @@ startGame()
 
 // write your code after this line:
 
+ const RAINBOW = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black"]
 
+    function drawLine(numOfSquares, color) {
+        for (let i = 0; i < numOfSquares; i++) {
+            KAREL.draw(color)
+        }
+        KAREL.turnRight()
+    }
+
+    for (let k = 9; k > 0; k--) {
+        drawLine(k, RAINBOW[k-1])
+        drawLine(k, RAINBOW[k-1])
+
+        if (k === 9) {
+            drawLine(k, RAINBOW[k-1])
+        }
+    }
 
 
 
